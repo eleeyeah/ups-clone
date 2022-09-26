@@ -1,3 +1,41 @@
+.mt-4 {
+  margin-top: 1rem
+}
+
+.h-64 {
+  height: 16rem
+}
+
+.h-12 {
+  height: 3rem
+}
+
+.w-full {
+  width: 100%
+}
+
+.rounded-full {
+  border-radius: 9999px
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity))
+}
+
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem
+}
+
+.pt-5 {
+  padding-top: 1.25rem
+}
+
+.pb-0 {
+  padding-bottom: 0px
+}
+
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity))
