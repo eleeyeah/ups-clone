@@ -1,20 +1,21 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet } from "react-native";
+import { TailwindProvider } from "tailwind-rn";
+import CustomersScreen from "./screens/CustomersScreen";
+import utilities from "./tailwind.json";
+import { NavigationContainer } from '@react-navigation/native';
+import RootNavigator from "./navigator/RootNavigator";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+    // @ts-ignore - TailwindProvider is not typed
+    <TailwindProvider utilities={utilities}>
+      <NavigationContainer>
+      <RootNavigator />
+      </NavigationContainer>
       <StatusBar style="auto" />
-    </View>
+    </TailwindProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
