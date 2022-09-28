@@ -9,7 +9,7 @@ type TrackingItems {
   items: [Items]
   customer: Customer
     @materializer(
-    query: "getCustomerbyId"
+    query: "getCustomerById"
     arguments: [{name: "id", field: "customer_id"}]
   )
 }
@@ -22,12 +22,12 @@ type TrackingItemsList {
 type Query {
   getTrackingItemById(id: ID!): TrackingItems
     @rest(
-      endpoint: "https://ups-clone-1f70e-default-rtdb.europe-west1.firebasedatabase.app/trackingItems/$id.json"
+      endpoint: "https://ups-clone-1f70e-default-rtdb.europe-west1.firebasedatabase.app//trackingItems/$id.json"
     )
   getTrackingItems: [TrackingItemsList]
 
     @rest(
       endpoint: "https://ups-clone-1f70e-default-rtdb.europe-west1.firebasedatabase.app/trackingItems.json"
-      transforms:[{pathpattern: [], editor:"objectToArray"}]
+      transforms:[{pathpattern: [], editor: "objectToArray"}]
     )
   }

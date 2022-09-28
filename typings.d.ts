@@ -34,7 +34,7 @@ type Order = {
     carrier: string;
     createdAt: string;
     trackingId: string;
-    trackingItems: trackingItem;
+    trackingItems: TrackingItem;
     shippingCost: number;
     Address: string;
     City: string;

@@ -22,8 +22,8 @@ query GetOrders   {
       shippingCost
       Address
       City
-      Longitude
-      Latitude
+      Lng
+      Lat
       trackingItems {
         customer_id
         customer {

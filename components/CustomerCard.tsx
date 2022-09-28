@@ -4,7 +4,8 @@ import useCustomerOrders from "../hooks/useCustomerOrders";
 import { useTailwind } from "tailwind-rn/dist";
 import { useNavigation } from "@react-navigation/native";
 import { CustomerScreenNavigationProp } from "../screens/CustomersScreen";
-import { Card } from "@rneui/base";
+import { Card } from "@rneui/themed";
+
 
 
 
@@ -25,9 +26,10 @@ const CustomerCard = ({ email, name, userId }: Props) => {
     
  
     <TouchableOpacity>
-        <Card>
+        <Card containerStyle={tw("p-5 rounded-lg")}>
             <View>
-                <Text>CustomerCard</Text>
+                <Text> {name} </Text>
+                <Text> ID: {userId} </Text>
 
             </View>
         </Card>
